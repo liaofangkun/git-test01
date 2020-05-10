@@ -1,0 +1,19 @@
+
+.item{
+  padding-left: 20rpx;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E0E0E0;
+  position: relative;
+  /* border-top: none; */
+}
+.item:last-child {
+  border: none;
+}
+.item-icon{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: -50rpx;
+}

@@ -1,0 +1,9 @@
+
+<view class="page" a:if="{{currentIndex == index}}">
+    <text class="guide-title">{{title}}</text>
+    <slot></slot>
+    <view class="nav">
+        <button a:if={{prevBtnText}} class="prev" size="mini" type="default" onTap="prevHandler">{{prevBtnText}}</button>
+        <button a:if={{nextBtnText}} class="next" size="mini" type="default" onTap="nextHandler" data-index="{{index}}">{{nextBtnText}}</button>
+    </view>
+</view>

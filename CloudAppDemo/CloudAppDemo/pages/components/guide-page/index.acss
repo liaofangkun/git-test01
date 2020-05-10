@@ -1,0 +1,39 @@
+
+.nav {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.nav .prev {
+  margin-left: unset;
+}
+
+.nav .next {
+  margin-right: unset;
+}
+.guide-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #555;
+  line-height: 40rpx;
+}
+
+.page {
+  width: 100%;
+  padding: 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+  
+.page text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #666;
+}
+.page image{
+  width: 100%;
+}

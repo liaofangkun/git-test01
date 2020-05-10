@@ -1,0 +1,4 @@
+<view class="item {{last ? 'last-child' : ''}}" data-url="pages/{{url}}/index" onTap="clickHandle">
+    <image class="item-icon" src="{{icon}}" data-url="pages/{{url}}/index"></image>
+    <text data-url="pages/{{url}}/index">{{title}}</text>
+</view>

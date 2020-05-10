@@ -1,0 +1,86 @@
+{
+  "components": {
+    "1544685454822_1": {
+      "dataName": "checkbox123123",
+      "extension": {
+        "defaultValue": true,
+        "text": "这是文案"
+      },
+      "invisible": false,
+      "label": {
+        "description": {
+          "desc": "测试",
+          "icon": "mobile-phone"
+        },
+        "title": "这是标题"
+      },
+      "style": {
+        "height": "auto",
+        "width": "auto"
+      },
+      "type": "Checkbox",
+      "validateProps": {
+        "dataType": "Bool",
+        "required": false,
+        "validate": false
+      },
+      "wrapperStyle": {}
+    },
+    "1544687930118_1": {
+      "dataName": "select123123123123",
+      "extension": {
+        "dataSource": [
+          {
+            "label": "test+group",
+            "value": 805476889
+          },
+          {
+            "label": "good",
+            "value": 803674808
+          }
+        ],
+        "defaultValue": 805476889,
+        "placeholder": "placeholder"
+      },
+      "invisible": false,
+      "label": {
+        "description": {
+          "desc": "Select description text",
+          "icon": "mobile-phone"
+        },
+        "title": "Select Title"
+      },
+      "style": {
+        "height": "auto",
+        "width": "auto"
+      },
+      "type": "Select",
+      "validateProps": {
+        "dataType": "",
+        "required": false,
+        "validate": false
+      },
+      "wrapperStyle": {
+        "borderBottom": "1px solid #E1E1E1",
+        "marginTop": "20px",
+        "paddingBottom": "20px"
+      }
+    }
+  },
+  "globalData": {},
+  "layout": [
+    {
+      "children": [],
+      "id": "1544685454822_1",
+      "root": true
+    },
+    {
+      "children": [],
+      "id": "1544687930118_1",
+      "root": true
+    }
+  ],
+  "moduleData": {},
+  "rules": [],
+  "schemaVersion": "1"
+}

@@ -1,0 +1,20 @@
+{
+  "source": "tbo",
+  "type": "application",
+  "group": "oapps",
+  "editor": "oapp",
+  "npmClient": "tnpm",
+  "options": {},
+  "assets": {
+    "type": "builder",
+    "builder": {
+      "name": "@ali/builder-miniapp"
+    }
+  },
+  "projectinfo": {
+    "bu": "miniapp",
+    "type": "app",
+    "ext": "{\"appId\":8615823,\"type\":\"APP\",\"appkey\":\"25374671\",\"name\":\"sdktest\"}"
+  },
+  "terminal": "mobile"
+}

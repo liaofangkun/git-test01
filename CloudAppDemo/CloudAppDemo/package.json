@@ -1,0 +1,8 @@
+{
+  "name": "sdktest",
+  "version": "0.0.21",
+  "description": "miniapp for taobao",
+  "dependencies": {
+    "@tbmp/mp-cloud-sdk": "1.1.4"
+  }
+}

@@ -1,0 +1,15 @@
+
+.group-title{
+  font-size: 32rpx;
+  color: #757575;
+  padding: 46rpx 20rpx;
+}
+.item-group{
+  /* margin-top: 20rpx; */
+}
+.group-content{
+  background: #fff;
+  padding-left: 72rpx;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}

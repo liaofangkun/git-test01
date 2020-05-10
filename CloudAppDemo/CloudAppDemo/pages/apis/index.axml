@@ -1,0 +1,11 @@
+<view  class="container">
+    <view  class="header">
+        <image  src="https://gw.alicdn.com/tfs/TB1MWUoMxjaK1RjSZFAXXbdLFXa-200-200.png" class="avatar" background-size="cover">
+        </image>
+        <text onTap="test" class=" _fc-text_dJikoSSJ6">云应用调用Demo</text>
+    </view>
+    <button size="default" onTap="invokeCloudApp">调用云应用</button>
+    <view class="cloud-app-result">
+      <text>{{result}}</text>
+    </view>
+</view>

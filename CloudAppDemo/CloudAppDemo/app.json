@@ -1,0 +1,8 @@
+{
+  "pages": [
+    "pages/apis/index"
+  ],
+  "window": {
+    "defaultTitle": "小程序云团队出品"
+  }
+}

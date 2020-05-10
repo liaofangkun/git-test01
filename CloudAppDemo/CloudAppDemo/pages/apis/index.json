@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "list-item": "../components/list-item/index",
+    "item-group": "../components/item-group/index",
+    "item-group-1": "/pages/components/item-group/index",
+    "list-item-1": "/pages/components/list-item/index"
+  }
+}

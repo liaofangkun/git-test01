@@ -1,0 +1,5 @@
+<view class="code">
+    <view class="code-text">
+        <slot></slot>
+    </view>
+</view>

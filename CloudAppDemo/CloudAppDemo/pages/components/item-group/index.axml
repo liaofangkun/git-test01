@@ -1,0 +1,6 @@
+<view class="item-group">
+    <view class="group-title">{{title}}</view>
+    <view class="group-content">
+        <slot/>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+.code-text{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #666;
+  background: white;
+  white-space: pre;
+}
+.code {
+  padding: 20rpx;
+}
+  
+.code-dark {
+    margin-top: 20rpx;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20rpx;
+    font-size: 28rpx;
+    line-height: 36rpx;
+    border-radius: 6rpx;
+    color: #fff;
+    white-space: pre
+  }
