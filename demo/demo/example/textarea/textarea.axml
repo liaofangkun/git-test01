@@ -1,0 +1,15 @@
+<view class="com-wrap">
+  <view class="com-title">简单</view>
+  <view class="com-title">{{aaa}}</view>
+  <textarea placeholder="TextArea" aria-label="TextArea" value="{{aaa}}" onChange="onChange"/>
+  
+  <view class="com-title">最大长度</view>
+  <textarea placeholder="TextArea" maxLength="100" rows="" hasLimitHint />
+  
+  <view class="com-title">禁用状态</view>
+  <textarea disabled aria-label="disabled" placeholder="medium" maxLength="10" hasLimitHint></textarea>
+  
+  <view class="com-title">自动高度</view>
+  <textarea autoHeight trim aria-label="auto height" placeholder="autoHeight" />
+  <button id="x" class="xx"></button>
+</view>

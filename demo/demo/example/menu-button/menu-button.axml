@@ -1,0 +1,63 @@
+<view class="com-wrap">
+    <view class="com-sub-title">按钮类型</view>
+    <menu-button class="block" label="Document Edit">
+        <item onTap="itemclick" data-value="undo" key='1'>undo</item>
+        <item key='2'>redo</item>
+    </menu-button>
+    <menu-button class="block" type="primary" label="Document Edit">
+        <item key='1'>undo</item>
+        <item key='2'>redo</item>
+    </menu-button>
+    <menu-button class="block" type="secondary" size="small" label="Document Edit">
+        <item key='1'>undo</item>
+        <item key='2'>redo</item>
+    </menu-button>
+
+    <view class="com-sub-title">多选</view>
+    <menu-button selectMode="multiple" onSelect="menuselect" label="Document Edit">
+        <item key='1'>undo</item>
+        <item key='2'>redo</item>
+        <divider />
+        <item key='3'>copy</item>
+        <item key='4'>paste</item>
+    </menu-button>
+    <menu-button class="block" text type="primary" size="large" label="Document Edit">
+        <item key='1'>undo</item>
+        <item key='2'>redo</item>
+    </menu-button>
+    <menu-button class="block" text type="secondary" label="Document Edit">
+        <item key='1'>undo</item>
+        <item key='2'>redo</item>
+    </menu-button>
+
+    <view class="com-sub-title">按钮尺寸</view>
+    <menu-button class="block" label="Edit Document" size="small">
+        <item key='1'>undo</item>
+        <item key='2'>redo</item>
+    </menu-button>
+    <menu-button class="block" label="Edit Document" size="medium">
+        <item key='1'>undo</item>
+        <item key='2'>redo</item>
+    </menu-button>
+    <menu-button class="block" label="Edit Document" size="large">
+        <item key='1'>undo</item>
+        <item key='2'>redo</item>
+    </menu-button>
+
+    <view class="com-sub-title">菜单组</view>
+    <menu-button class="block" type="primary" label="Document Edit" onItemTap={selectItem}>
+        <item key="undo">Undo</item>
+        <item key="redo">Redo</item>
+        <divider />
+        <group>
+            <item key="cut">Cut</item>
+            <item key="copy">Copy</item>
+            <item key="paste">Paste</item>
+        </group>
+    </menu-button>
+
+    <view class="com-sub-title">选中状态</view>
+    <menu-button selectMode="single" class="block" label="Edit Document">
+        <item a:for="{{items}}">{{index}}</item>
+    </menu-button>
+</view>

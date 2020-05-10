@@ -1,0 +1,55 @@
+<view class="api-container">
+  <base-card title="缓存">
+    <text class="common-text">async method</text>
+    <view>
+      <view style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <input class="common-input-1" placeholder="key" name="key" value="{{key}}" onChange="keyChange" style="width: 140px;"></input>
+        <input class="common-input-1" placeholder="data" name="data" value="{{data}}" onChange="dataChange" style="width: 140px;"></input>
+      </view>
+      <button type="normal" class="common-button-1" onTap="setStorage">存储数据</button>
+      <button type="normal" class="common-button-1" onTap="getStorage">读取数据</button>
+      <button type="normal" class="common-button-1" onTap="removeStorage">删除数据</button>
+      <button type="normal" class="common-button-1" onTap="clearStorage">清除数据</button>
+      <button type="normal" class="common-button-1" onTap="getStorageInfo">获取数据</button>
+    </view>
+    <text class="common-text">sync method</text>
+    <view>
+      <view style="display: flex; justify-content: center; margin-bottom: 10px;">
+        <input class="common-input-1" placeholder="key" name="keySync" value="{{keySync}}" onChange="keyChangeSync" style="width: 140px;"></input>
+        <input class="common-input-1" placeholder="data" name="dataSync" value="{{dataSync}}" onChange="dataChangeSync" style="width: 140px;"></input>
+      </view>
+      <button type="normal" class="common-button-1" onTap="setStorageSync">存储数据</button>
+      <button type="normal" class="common-button-1" onTap="getStorageSync">读取数据</button>
+      <button type="normal" class="common-button-1" onTap="removeStorageSync">删除数据</button>
+      <button type="normal" class="common-button-1" onTap="clearStorageSync">清除数据</button>
+      <button type="normal" class="common-button-1" onTap="getStorageInfoSync">获取数据</button>
+    </view>
+  </base-card>
+  <base-card title="文件">
+    <view style="display: flex; justify-content: center; margin-bottom: 5px;">
+      <button type="primary" onTap="chooseImage" style="width: 96px; margin: 0 2px;">选择文件</button>
+      <button type="primary" onTap="saveFile" style="width: 96px; margin: 0 2px;">保存文件</button>
+    </view>
+    <button type="primary" onTap="getFileInfo" class="custom-button">获取文件信息</button>
+    <button type="primary" onTap="getSavedFileInfo" class="custom-button">获取保存的文件信息</button>
+    <button type="primary" onTap="getSavedFileList" class="custom-button">获取保存的文件列表</button>
+    <button type="primary" onTap="removeSavedFile" class="custom-button">移除保存的文件</button>
+    <button type="normal" onTap="clear" class="custom-button">删除文件</button>
+  </base-card>
+  <base-card title="数据安全">
+    <!-- <form-item label="async method">
+      <input class="common-input-1" placeholder="key"></input>
+    </form-item> -->
+    <text class="common-text">input:</text>
+      <input class="common-input-1" placeholder="原数据" defaultValue="" onChange="onInput"></input>
+    <text class="common-text">output:</text>
+      <input class="common-input-1" disabled value="{{outputValue}}"></input>
+    <view style="margin-top: 10px;">
+      <button type="primary" onTap="onEncrypt" style="widthmargin: 0 10px;">加密</button>
+      <button type="primary" onTap="onDecrypt" style="margin: 0 10px;">解密</button>
+    </view>
+  </base-card>
+  <base-card title="容器事件">
+    <text class="common-text">监听容器的刷新事件，请点击刷新按钮</text>
+  </base-card>
+</view>

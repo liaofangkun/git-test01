@@ -1,0 +1,29 @@
+<view class="api-container">
+  <base-card title="弹窗类">
+    <button type="primary" onTap="alert" class="custom-button">警告框</button>
+    <button type="primary" onTap="comfirm" class="custom-button">确认框</button>
+  </base-card>
+  <base-card title="加载提示">
+    <button type="primary" onTap="showToastSuccess" class="custom-button">显示 success 提示</button>
+    <button type="primary" onTap="showToastFail" class="custom-button">显示 fail 提示</button>
+    <button type="primary" onTap="showToastException" class="custom-button">显示 exception 提示</button>
+    <button type="primary" onTap="showToastNone" class="custom-button">显示 none 弱提示</button>
+    <button type="primary" onTap="hideToast" class="custom-button">隐藏提示</button>
+  </base-card>
+  <base-card title="页面跳转">
+    <button type="primary" onTap="navigateTo" class="custom-button">跳转到新页面</button>
+    <!-- <button type="primary" onTap="navigateBack" class="custom-button">返回上一页</button> -->
+    <button type="primary" onTap="redirectTo" class="custom-button">在当前页面打开</button>
+  </base-card>
+  <base-card title="节点查询">
+    <view class="page-section">
+      <view class="all">节点 all1</view>
+      <view class="all">节点 all2</view>
+      <!-- <view id="one">节点 one</view>
+      <view id="scroll" style="height:200px;overflow: auto">
+        <view style="height:400px">独立滚动区域</view>
+      </view> -->
+      <button type="primary" onTap="createSelectorQuery" class="custom-button">节点查询</button>
+    </view>
+  </base-card>
+</view>

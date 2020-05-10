@@ -1,0 +1,71 @@
+<view class="com-wrap">
+  <view class="com-title">按钮类型</view>
+  <view class="com-sub-title">普通类型</view>
+  <button class="custom-button-1" type="normal" onTap="ohmygod">Normal</button>
+  <button class="custom-button-1" type="primary" onClick="test">Prirmary</button>
+  <button class="custom-button-1" type="secondary">Secondary</button>
+
+  <view class="com-sub-title">幽灵类型</view>
+  <button class="custom-button-1" type="normal" text>Normal</button>
+  <button class="custom-button-1" type="primary" text>Primary</button>
+  <button class="custom-button-1" type="secondary" text>Secondary</button>
+
+  <view class="com-sub-title">警告类型</view>
+  <button class="custom-button-1" type="normal" warning>Normal</button>
+  <button class="custom-button-1" type="primary" warning>Primary</button>
+
+  <view class="com-title">按钮尺寸</view>
+  <button class="custom-button-1" type="primary" size="large"><icon size="small" type="atm" />Large</button>
+  <button class="custom-button-1" type="primary"><icon size="xs" type="atm" />Medium</button>
+  <button class="custom-button-1" type="primary" size="small"><icon size="xs" type="atm" />Small</button>
+
+  <view class="com-title">图标按钮</view>
+  <button class="custom-button-1"><icon size="xs" type="atm" /> ATM</button> 
+  <button class="custom-button-1" text><icon size="xs" type="atm" /> ATM</button> 
+  <button class="custom-button-1" warning><icon size="xs" type="atm" /> ATM</button> 
+  <button class="custom-button-1" iconSize="xxs"><icon size="xs" type="arrow-left" /> ARROW</button>
+
+  <view class="com-title">加载中</view>
+  <button class="custom-button-1" a:if="{{loading}}" type="secondary" onTap="setLoading" loading> loding</button>
+  <button class="custom-button-1" a:else type="secondary" onTap="setLoading">click to loading</button>
+  
+  <view class="com-title">幽灵按钮</view>
+  <button class="custom-button-1" ghost="light">Ghost light</button>
+  <button class="custom-button-1" ghost="dark">Ghost dark</button>
+
+  <view class="com-title">不可用状态</view>
+  <button class="custom-button-1" type="primary">Primary</button>
+  <button class="custom-button-1" component="a" type="primary" disabled>Primary</button>
+  <button class="custom-button-1" type="secondary">Secondary</button>
+  <button class="custom-button-1" type="secondary" disabled>Secondary</button>
+  <button class="custom-button-1" type="normal">Normal</button>
+  <button class="custom-button-1" type="normal" disabled>Normal</button>
+
+  <view class="com-title">自定义标签类型</view>
+  <button class="custom-button-1" component="a" href="http://www.alibaba.com" target="_blank" type="normal">go alibaba.com</button>
+  <button class="custom-button-1" component="a" href="http://www.alibaba.com" target="_blank" type="primary">alibaba.com</button>
+  <button class="custom-button-1" component="a" href="http://www.alibaba.com" target="_blank" type="secondary">alibaba.com</button>
+
+  <view class="com-title">按钮组</view>
+  <button-group>
+        <button class="custom-button-1" type="primary">OK</button>
+        <button class="custom-button-1" type="secondary">Cancel</button>
+    </button-group>
+    <button-group>
+        <button class="custom-button-1" disabled>Left</button>
+        <button class="custom-button-1" disabled>Middle</button>
+        <button class="custom-button-1" disabled>Right</button>
+    </button-group>
+    <br />
+    <br />
+
+    <button-group>
+        <button class="custom-button-1" type="primary"><icon size="xs" type="arrow-left" /> Backward</button>
+        <button class="custom-button-1" type="primary">Forward <icon size="xs" type="arrow-right" /></button>
+    </button-group>
+    <button-group>
+        <button class="custom-button-1" type="primary"><icon size="xs" type="prompt" /></button>
+        <button class="custom-button-1" type="primary"><icon size="xs" type="clock" /></button>
+        <button class="custom-button-1" type="primary"><icon size="xs" type="set" /></button>
+    </button-group>
+</view>

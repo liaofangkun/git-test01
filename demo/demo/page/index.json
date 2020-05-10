@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "router-view": "../component/router-view/router-view",
+    "base": "../component/base/base",
+    "scene": "../component/scene/scene",
+    "api": "../component/api/api",
+    "adaptive": "../component/adaptive/adaptive"
+  }
+}

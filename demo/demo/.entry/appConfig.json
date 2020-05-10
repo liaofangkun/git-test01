@@ -1,0 +1,31 @@
+{
+  "window": {
+    "defaultTitle": "小程序"
+  },
+  "pages": [
+    "page/index",
+    "page/adaptive/adaptive",
+    "page/test/test",
+    "page/back/back",
+    "page/to/to"
+  ],
+  "launchParams": {
+    "page/index": {
+      "defaultTitle": "小程序"
+    },
+    "page/adaptive/adaptive": {
+      "defaultTitle": "小程序",
+      "component": true
+    },
+    "page/test/test": {
+      "defaultTitle": "小程序"
+    },
+    "page/back/back": {
+      "defaultTitle": "小程序"
+    },
+    "page/to/to": {
+      "defaultTitle": "小程序"
+    }
+  },
+  "prerenderPage": "index.html"
+}

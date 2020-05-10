@@ -1,0 +1,21 @@
+<view class="com-wrap">
+    <view class="com-sub-title">基础使用</view>
+    <date-picker class="block" state="success"/>
+    <range-picker class="block" onChange="onRangeChange" onOk="onRangeChange" value="{{datevalue}}" />
+    <month-picker class="block" />
+    <year-picker class="block" />
+
+    <view class="com-sub-title">默认值</view>
+    <date-picker default-value="2019-01-01" class="block" />
+    <range-picker default-value="{{['2019-01-01', '2019-02-02']}}" onChange="onDateChange" class="block" />
+    <month-picker default-value="2019-03" class="block" />
+    <year-picker default-value="2019" onChange="onDateChange" class="block" />
+
+    <view class="com-sub-title">禁用</view>
+    <date-picker default-value="2019-01-01" class="block" disabled />
+    <range-picker default-value="{{['2019-01-01', '2019-02-02']}}" disabled class="block" />
+    
+    <view class="com-sub-title">时间</view>
+    <date-picker default-value="{{time}}" onChange="onRangeChange" class="block" show-time="{{ format: 'HH:mm:ss' }}" />
+    
+</view>

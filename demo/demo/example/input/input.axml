@@ -1,0 +1,166 @@
+<view class="com-wrap">
+
+  <view class="com-title">简单</view>
+  <input class="block" size="large" placeholder="Large" defaultValue="{{23}}" value="{{value2}}" onPressEnter="onPressEnter" onInput="onInput" aria-label="Large" />
+  <input class="block" placeholder="Medium" aria-label="Medium" value="{{value}}" onChange="onChange" aria-labelledby="J_inputMedium" />
+  <input placeholder="Small" size="small" label="SIZE :"/>
+  <view class="com-title">密码输入框</view>
+  <input class="block" htmlType="password" defaultValue="whoami" aria-label="Please input password"/>
+  <view class="com-title">禁用状态</view>
+  <input disabled aria-label="disabled" placeholder="medium" maxLength="10" hasLimitHint/>
+
+  <view class="com-title">前后拓展</view>
+  <view class="wrap">
+    <input hasLimitHint
+    class="long mb"
+    addonTextBefore="http://"
+    addonTextAfter=".com"
+    size="large"
+    defaultValue="alibaba"
+    maxLength="2"
+    aria-label="input with config of addonTextBefore and addonTextAfter" />
+    
+    <input
+        class="long mb"
+        addonTextBefore="http://"
+        addonTextAfter=".com"
+        size="medium"
+        defaultValue="非受控组件"
+        aria-label="input with config of addonTextBefore and addonTextAfter" />
+
+    <input
+        class="long mb"
+        addonTextBefore="http://"
+        addonTextAfter=".com"
+        size="small"
+        value="受控组件"
+        aria-label="input with config of addonTextBefore and addonTextAfter" />
+  </view>
+
+
+  <view class="com-title">清除按钮</view>
+  <view class="wrap">
+    <input
+        class="mb"
+        hasClear
+        defaultValue="clear by click"
+        size="small"
+        aria-label="input with config of hasClear" />
+    <input
+        class="mb"
+        hasClear
+        defaultValue="2019-09-10 10:10:20"
+        aria-label="input with config of hasClear"
+        hint="calendar"/>
+    <input
+        class="mb"
+        hasClear
+        defaultValue="clear by click"
+        size="large"
+        aria-label="input with config of hasClear"/>
+  </view>
+
+
+  <view class="com-title">错误状态</view>
+  <view style="display:flex;flex-wrap:wrap;">
+    <input 
+        class="error"
+        state="error"
+        placeholder="error"
+        size="small"
+        aria-live="assertive"
+        aria-label="error" />
+    <input state="error"
+        class="error"
+        hasLimitHint
+        maxLength="100"
+        placeholder="error"
+        size="medium"
+        aria-live="assertive"
+        aria-label="error" />
+    <input state="error"
+        class="error"
+        multiple
+        placeholder="error"
+        size="large"
+        aria-live="assertive"
+        aria-label="error" />
+
+    <input state="success"
+        class="error"
+        size="small"
+        value="success"
+        aria-live="assertive"
+        aria-label="success"/>
+    <input state="success"
+        class="error"
+        maxLength="100"
+        hasLimitHint
+        placeholder="success"
+        size="medium"
+        aria-live="assertive"
+        aria-label="success"/>
+    <input state="success"
+        class="error"
+        placeholder="success"
+        size="large"
+        aria-live="assertive"
+        aria-label="success"/>
+
+    <input state="loading"
+        class="error"
+        placeholder="loading"
+        size="small"
+        aria-live="assertive"
+        aria-label="loading"/>
+    <input state="loading"
+        class="error"
+        placeholder="loading"
+        size="medium"
+        aria-live="assertive"
+        aria-label="loading"/>
+    <input state="loading"
+        class="error"
+        placeholder="loading"
+        size="large"
+        aria-live="assertive"
+        aria-label="loading"/>
+  </view>
+
+
+
+  <view class="com-title">最大长度</view>
+  <view class="wrap">
+    <input
+        class="mb"
+        maxLength="10"
+        size="large"
+        placeholder="Large"
+        value="this.state.control"
+        hasLimitHint
+        aria-label="input max length 10" />
+
+    <input
+        class="mb"
+        maxLength="20"
+        placeholder="medium"
+        hasLimitHint
+        cutString="false"
+        aria-label="input max length 20" />
+
+    <input
+        class="mb"
+        hasLimitHint
+        size="small"
+        placeholder="small"
+        maxLength="100"
+        aria-label="input max length 100" />
+    <input class="mb" maxLength="5" placeholder="Original maxLength" aria-label="input max length 5" />
+  </view>
+
+  <view class="com-title">去除空格</view>
+  <input class="mb" trim placeholder="cant not input space" aria-label="cant not input space"/>
+
+
+
+</view>

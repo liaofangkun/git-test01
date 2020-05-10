@@ -1,0 +1,7 @@
+
+.large-width {
+  width: 100px;
+}
+.mr {
+  margin-left: 10px;
+}

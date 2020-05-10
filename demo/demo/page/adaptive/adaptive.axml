@@ -1,0 +1,11 @@
+<view>
+  <button type="primary" onTap="onActiveKeyChange" data-path="/component/button"> 切换到"Button" </button>
+  <button type="primary" onTap="onActiveKeyChange" data-path="/api/base"> 切换到"基础api" </button>
+  <framework info="{{ info }}" menu="{{ menu }}" onChange="onChange" defaultActiveKey="{{ defaultActiveKey }}" activeKey="{{ activeKey }}" >
+    <router-view>
+      <base slot="component" />
+      <scene slot="scene" />
+      <api slot="api" />
+    </router-view>
+  </framework>
+</view>

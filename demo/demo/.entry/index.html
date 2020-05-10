@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="manifest" href="manifest.json" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script>
+    (function () {
+      var scriptTag = '#nebula-addcors';
+      var crossoriginTag = ' crossorigin';
+      if (!window.Promise) {
+        document.writeln('<script src="https://a.test.alipay.net/g/appx/af-appx/1.18.1/es6-promise.js' + scriptTag + '"' + crossoriginTag + '><' + '/' + 'script>');
+      }
+      if (!window.Set || !window.Map) {
+        document.writeln('<script src="https://gw.alipayobjects.com/as/g/appx_release/deps/1.0.0/es6-set-map.js' + scriptTag + '"' + crossoriginTag + '><' + '/' + 'script>');
+      }
+    })();
+  </script>
+  <script>
+    if (self.ES6Promise) {
+      self.ES6Promise.polyfill();
+    }
+  </script>
+  <link rel="stylesheet" href="https://a.test.alipay.net/g/appx/af-appx/1.18.1/af-appx.css" />
+  <style>
+    body {
+      background: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="__react-content">
+  </div>
+  <script src="https://a.test.alipay.net/g/appx/af-appx/1.18.1/af-appx.js#nebula-addcors" crossorigin></script>
+  <script src="http://localhost:8765/miniapp-components.js"></script>
+  <script src="/index.js"></script>
+  <script>
+    (function () {
+      // function onReady(callback) {
+      //   document.addEventListener('AlipayJSBridgeReady', function () {
+      //     var AlipayJSBridge = window.AlipayJSBridge;
+      //     if (AlipayJSBridge && AlipayJSBridge.startupParams.fromIDE) {
+      //       var script = document.createElement('script');
+      //       script.src = 'https://gw.alipayobjects.com/os/rmsportal/UbFNRJFKQnSACLSdVJRs.js';
+      //       document.head.appendChild(script);
+      //     }
+
+      //     callback({
+      //       bridge: AlipayJSBridge
+      //     });
+      //   });
+      // }
+
+      function onReady(callback) {
+        window.AlipayJSBridge = {
+          call() { },
+          startupParams: {
+            debug: 'framework',
+          },
+        }
+        callback({
+          bridge: window.AlipayJSBridge,
+        });
+      }
+
+      window.bootstrapApp({
+        worker: '/index.worker.js',
+        onReady: onReady
+      });
+    })();
+  </script>
+</body>
+
+</html>

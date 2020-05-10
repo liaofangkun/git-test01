@@ -1,0 +1,60 @@
+<view class="com-wrap">
+  <view class="com-title">基本</view>
+  <form style="width: 60%"  data-name="form" onChange="onChange" labelCol="{{labelCol}}" wrapperCol="{{wrapperCol}}">
+    <form-item label="username:" required>
+        <input onChange="onChange" data-name="username" defaultValue="{{username}}"  name="username" placeholder="Please Enter username"/>
+    </form-item>
+
+    <form-item label="password:">
+        <input onChange="onChange" data-name="password" defaultValue="{{password}}" htmlType="password" name="pass" placeholder="Please Enter Password"/>
+    </form-item>
+
+    <form-item label="Note:" help="something">
+        <textarea  onChange="onChange" data-name="note" defaultValue="{{note}}" placeholder="something" name="remark" />
+    </form-item>
+
+    <form-item label="Select" >
+        <select onChange="onChange" data-name="select" defaultValue="{{select}}"  style="width: 200px" name="select">
+            <option value="jack">jack</option>
+            <option value="lucy">lucy</option>
+            <option value="disabled" disabled>disabled</option>
+            <option value="hugohua">hugohua</option>
+        </select>
+    </form-item>
+
+    <form-item label="Switch:">
+      <switch onChange="onChange" data-name="switch" name="switch" defaultChecked="{{switch}}" />
+    </form-item>
+
+    <form-item label="Radio:">
+      <!-- <radio-group name="radio">
+          <radio value="apple">apple</radio>
+          <radio value="banana">banana</radio>
+          <radio disabled value="cherry">cherry（disabled）</radio>
+      </radio-group> -->
+      <radio-group dataSource="{{list}}" onChange="onChangeHeihei" />
+    </form-item>
+
+    <form-item label="Checkbox-group:">
+      <checkbox-group name="checkbox" data-name="checkbox-group" defaultValue="b" onChange="onChange">
+          <checkbox onChange="onChange" data-name="option1" name="option1" value="a">option 1 </checkbox>
+          <checkbox onChange="onChange" data-name="option2" name="option2" style="margin-left:8px" value="b">option 2 </checkbox>
+          <checkbox onChange="onChange" data-name="option3" name="option3" style="margin-left:8px" disabled value="c">option 3（disabled）</checkbox>
+      </checkbox-group>
+    </form-item>
+
+     
+
+    <form-item label="Agreement:">
+        <checkbox onChange="onChange" data-name="agreement" name="agreement" name="agreement" defaultChecked="{{agreement}}">Agree</checkbox>
+    </form-item>
+
+    <form-item label=" ">
+        <button onTap="handleSubmit">Confirm</button>
+        <!--<button style="margin-left:8px" onTap={this.reset}>reset</button>-->
+    </form-item>
+
+
+  </form>
+
+</view>

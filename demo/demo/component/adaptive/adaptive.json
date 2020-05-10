@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "router-view": "../router-view/router-view",
+    "framework": "../../example/framework/framework"
+  }
+}

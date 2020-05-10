@@ -1,0 +1,15 @@
+<view class="api-container">
+  <base-card title="图片">
+    <button type="primary" onTap="chooseImage" class="custom-button">选择照片</button>
+    <button type="primary" onTap="previewImage" class="custom-button">预览照片</button>
+    <button type="primary" onTap="saveImage" class="custom-button">保存照片</button>
+  </base-card>
+  <base-card title="图片信息">
+    <image src="{{src}}" class="image-info" onLoad="imageLoad"></image>
+    <button type="primary" onTap="getImageInfo" class="custom-button">获取图片信息</button>
+  </base-card>
+  <base-card title="压缩图片">
+    <image src="{{compressedSrc}}" mode="{{mode}}" />
+    <button type="primary" onTap="selectImage" class="custom-button">选择图片</button>
+  </base-card>
+</view>

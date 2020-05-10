@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "router-view": "../router-view/router-view",
+    "other": "../../example/other/other",
+    "media": "../../example/media/media",
+    "interface": "../../example/interface/interface",
+    "network": "../../example/network/network",
+    "base": "../../example/base/base"
+  }
+}

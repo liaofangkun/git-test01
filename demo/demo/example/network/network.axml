@@ -1,0 +1,17 @@
+<view class="api-container">
+  <base-card title="Http请求">
+    <button type="primary" onTap="requestHttp" class="custom-button">使用httpRequest发起请求</button>
+  </base-card>
+  <base-card title="上传下载">
+    <button type="primary" onTap="uploadFile" class="custom-button">上传图片</button>
+    <button type="primary" onTap="download" class="custom-button">下载文件</button>
+  </base-card>
+  <base-card title="webSocket">
+    <view>
+      <input placeholder="wss://yourserver" class="common-input-1" onConfirm="onServerAddressComplete" onBlur="onServerAddressComplete"></input>
+      <button type="primary" onTap="connect_start">开始连接</button>
+      <pc-input placeholder="发送内容" class="common-input-1" onChange="onSendMessageReady" value="{{toSendMessage}}" />
+      <pc-button type="primary" onTap="send_start">发送数据</pc-button>
+    </view>
+  </base-card>
+</view>

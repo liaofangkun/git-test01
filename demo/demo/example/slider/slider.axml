@@ -1,0 +1,106 @@
+<view class="com-wrap">
+  <view class="com-title">基本用法</view>
+  <!-- <slider>
+    <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+        <image class="slider-img" src="{{item.url}}">
+    </view>
+  </slider> -->
+
+  <view class="com-title">多图轮播</view>
+  <!-- <view class="com-sub-title demo-item-title">slide one picture one at a time</view> -->
+  <slider slidesToShow="4" arrowPosition="outer" dots="false" lazyLoad >
+    <view class="view-1" style="width: '25%'" a:for="{{slides1}}" key="{{item}}">
+      <view class="view-sub-1">{{item}}</view>
+    </view>
+  </slider>
+  <!-- <view class="com-sub-title demo-item-title">slide multiple picture one at a time</view>
+  <slider slidesToShow=2 slidesToScroll=2 arrowPosition="outer" lazyLoad dots="false">
+    <view class="view-1" style="width: '25%'" a:for="{{slides1}}" key="{{item}}">
+      <view class="view-sub-1">{{item}}</view>
+    </view>
+  </slider> -->
+
+  <view class="com-title">垂直滑动</view>
+    <view style="width: '200px'">
+    <!-- <view class="demo-item-title">Vertical multi-picture mode</view>
+    <slider slideDirection="ver" slidesToShow=3 slidesToScroll=1 dots="false" arrowPosition="inner" arrowDirection="ver" class="ver-slick">
+      <view class="view-1" style="width: '25%'" a:for="{{slides1}}" key="{{item}}">
+        <view class="custom-slider view-sub-1" style="border: '1px solid transparent'">{{item}}</view>
+      </view>
+    </slider>
+  
+    <view class="demo-item-title">Vertical single-picture mode</view> -->
+    <slider slideDirection="ver" dots="false" arrowPosition="inner" arrowDirection="ver" class="ver-slick">
+      <view class="view-1" style="width: '25%'" a:for="{{slides1}}" key="{{item}}">
+        <view class="custom-slider view-sub-1" style="border: '1px solid transparent'">{{item}}</view>
+      </view>
+    </slider>
+    </view>
+
+  <view class="com-title">导航按钮尺寸</view>
+  <view class="com-sub-title">normal size</view>
+    <slider>
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+
+  <view class="com-sub-title">large size</view>
+    <slider arrowSize="large">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+
+  <view class="com-title">锚点方向</view>
+    <view class="com-sub-title">水平方向</view>
+    <slider dotsDirection="hoz">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+
+  <view class="com-sub-title">垂直方向</view>
+    <slider dotsDirection="ver">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+  <view class="com-title">锚点触发方式</view>
+  <view class="com-sub-title">点击触发</view>
+    <slider triggerType="click">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+    <view class="com-sub-title">hover触发</view>
+    <slider triggerType="hover">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+
+  <view class="com-title">导航箭头位置</view>
+      <slider triggerType="hover" arrowPosition="outer">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+        <slider triggerType="hover">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+
+  <view class="com-title">自动播放</view>
+        <slider triggerType="hover" autoplay autoplaySpeed="1000">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+        <slider triggerType="hover" autoplay autoplaySpeed="2000">
+      <view a:for="{{slides}}" key="{{index}}" class="slider-img-wrapper">
+          <image class="slider-img" src="{{item.url}}" />
+      </view>
+    </slider>
+</view>

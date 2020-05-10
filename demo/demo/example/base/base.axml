@@ -1,0 +1,24 @@
+<view class="api-container">
+  <base-card title="系统信息">
+    <button type="primary" onTap="getSystemInfo" class="custom-button">获取系统信息</button>
+    <button type="primary" onTap="getSystemInfoSync" class="custom-button">同步获取系统信息</button>
+  </base-card>
+  <base-card title="服务器时间">
+    <button type="primary" onTap="getServerTime" class="custom-button">获取服务器时间</button>
+  </base-card>
+  <base-card title="基础版本">
+    <button type="primary" onTap="getSDKVersion" class="custom-button">获取基础库版本号</button>
+  </base-card>
+  <base-card title="剪贴板">
+    <text class="common-text">setClipboard</text>
+    <view>
+      <input class="common-input-1" onChange="handleInput" value="{{text}}"></input>
+      <button type="primary" onTap="handleCopy">复制</button>
+    </view>
+    <text class="common-text">getClipboard</text>
+    <view>
+      <input disabled class="common-input-1" onChange="bindInput" value="{{copy}}" disabled></input>
+      <button type="normal" onTap="handlePaste">粘贴</button>
+    </view>
+  </base-card>
+</view>

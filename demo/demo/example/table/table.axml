@@ -1,0 +1,72 @@
+<view class="com-wrap">
+  <view class="com-title">基本使用</view>
+  <view class="com-sub-title">纯展示</view>
+  <table dataSource="{{datasource}}">
+    <table-column title="Id" dataIndex="id" />
+    <table-column title="Title" dataIndex="title.name" />
+    <table-column title="Time" dataIndex="time" />
+    <table-column title="Id" dataIndex="id" />
+  </table>
+
+  <view class="com-sub-title">自定义列内容</view>
+  <table dataSource="{{datasource}}">
+    <table-column title="Id" dataIndex="id" />
+    <table-column title="Title" dataIndex="title.name" />
+    <table-column title="Time" dataIndex="time" />
+    <table-column title="Id" dataIndex="id">
+      <view slot-scope="x" >
+        <view a:if="{{isEditor}}">{{testValue}}</view>
+      </view>
+      <button slot-scope="x" data-id="{{x.value}}" onTap="remove">Remove {{x.value}}</button>
+    </table-column>
+  </table>
+
+  <view class="com-title">可选择</view>
+  <view class="com-sub-title">多选</view>
+  <table dataSource="{{datasource1}}" selectedRowKeys="{{selectedRowKeys}}" onChange="onChange" onSelectAll="onSelectAll" onSelect="onSelect" >
+    <table-column title="Id" dataIndex="id" />
+    <table-column title="Title" width="{{200}}" dataIndex="title.name" />
+    <table-column title="Time" width="{{200}}" dataIndex="time" />
+  </table>
+
+  <view class="com-sub-title">单选</view>
+  <table dataSource="{{datasource}}" mode="single" onChange="onSingleChange" selectedRowKeys="{{selectedRowKey}}">
+    <table-column title="Id" dataIndex="id" />
+    <table-column title="Title" width="{{200}}" dataIndex="title.name" />
+    <table-column title="Time" width="{{200}}" dataIndex="time" />
+  </table>
+
+ <view class="com-title">分页</view>
+  <table dataSource="{{datasource1}}" loading="{{loading}}">
+    <table-column title="Id" lock="{{true}}" width="{{200}}" dataIndex="id" />
+    <table-column title="Title" width="{{1000}}" dataIndex="title.name" />
+    <table-column title="Time" width="{{1000}}" dataIndex="time" />
+  </table>
+  <pagination onChange="onPageChange" />
+
+  <view class="com-title">定制列</view>
+  <view class="com-sub-title">配置项</view>
+  <checkbox-group onChange="onCustom" dataSource="{{checkboxDatasource}}" value="{{checkboxValue}}" />
+  <view class="com-sub-title">表格</view>
+  <table dataSource="{{datasource2}}">
+    <table-column a:for="{{cols}}" title="{{item.title}}" dataIndex="{{item.dataIndex}}" />
+  </table>
+
+  <view class="com-title">重设列的尺寸</view>
+  <table dataSource="{{datasource}}" onResizeChange="onResizeChange">
+    <table-column resizable title="Id" dataIndex="id" width="{{customWidth.id}}" />
+    <table-column title="Title" dataIndex="title.name" />
+    <table-column title="Time" dataIndex="time" />
+    <table-column title="Id" dataIndex="id">
+      <button slot-scope="x" data-id="{{x.value}}" onTap="remove">Remove {{x.value}}</button>
+    </table-column>
+  </table>
+
+
+  <view class="com-title">排序与过滤</view>
+  <table dataSource="{{datasource2}}" onSort="onSort" onFilter="onFilter">
+    <table-column sortable title="Id" dataIndex="id" />
+    <table-column title="Title" dataIndex="title" filters="{{filters}}" filterMode="single"/>
+    <table-column title="Time" dataIndex="time" />
+  </table>
+</view>

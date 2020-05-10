@@ -1,0 +1,34 @@
+<view>
+  <view a:if="{{type === 'component'}}">
+    <button a:if="{{name === 'button'}}"></button>
+    <balloon a:if="{{name === 'balloon'}}"></balloon>
+    <rich-text a:if="{{name === 'rich-text'}}"></rich-text>
+    <menu-button a:if="{{name === 'menu-button'}}"></menu-button>
+    <slider a:if="{{name === 'slider'}}"></slider>
+    <icon a:if="{{name === 'icon'}}"></icon>
+    <text a:if="{{name === 'text'}}"></text>
+    <progress a:if="{{name === 'progress'}}"></progress>
+    <menu a:if="{{name === 'menu'}}"></menu>
+    <select a:if="{{name === 'select'}}"></select>
+    <textarea a:if="{{name === 'textarea'}}"></textarea>
+    <input a:if="{{name === 'input'}}"></input>
+    <checkbox a:if="{{name === 'checkbox'}}"></checkbox>
+    <switch a:if="{{name === 'switch'}}"></switch>
+    <radio a:if="{{name === 'radio'}}"></radio>
+    <date-picker a:if="{{name === 'date-picker'}}"></date-picker>
+    <pagination a:if="{{name === 'pagination'}}"></pagination>
+    <nav a:if="{{name === 'nav'}}"></nav>
+    <tab a:if="{{name === 'tab'}}"></tab>
+    <test a:if="{{name === 'test'}}"></test>
+  </view>
+  <view a:if="{{type === 'api'}}">
+    <network a:if="{{name === 'network'}}"></network>
+    <base a:if="{{name === 'base'}}"></base>
+    <interface a:if="{{name === 'interface'}}"></interface>
+    <media a:if="{{name === 'media'}}"></media>
+    <other a:if="{{name === 'other'}}"></other>
+  </view>
+  <view a:if="{{type === 'scene'}}">
+    <form a:if="{{name === 'form'}}"></form>
+  </view>
+</view>

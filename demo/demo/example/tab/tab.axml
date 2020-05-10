@@ -1,0 +1,119 @@
+<view class="com-wrap">
+  <view class="com-title">基础用法</view>
+  <tab>
+    
+    <tab-item 
+      a:for="{{tabs}}" 
+      title="{{item.tab}}"
+      itemKey="{{item.key}}"
+    >{{item.content}}</tab-item>
+  </tab>
+  
+  <view class="com-title">triggerType: hover</view>
+  <tab
+    triggerType="hover">
+    <tab-item 
+      a:for="{{tabs}}" 
+      title="{{item.tab}}"
+      itemKey="{{item.key}}"
+    >{{item.content}}</tab-item>
+  </tab>
+
+  <view class="com-title">超多项自动分页</view>
+  <tab
+    triggerType="hover">
+    <tab-item 
+      a:for="{{soMuchTabs}}" 
+      title="{{item.tab}}"
+      itemKey="{{item.key}}"
+    >{{item.content}}</tab-item>
+  </tab>
+
+  <view class="com-title">动态添加/删除</view>
+  <button onTap="addTab">增加</button>
+  <tab
+    onChange="onChange"
+    onClose="onClose"
+    activeitemKey="{{activeKey}}"
+  >
+    <tab-item 
+      a:for="{{dynamicTabs}}" 
+      title="{{item.tab}}"
+      itemKey="{{item.key}}"
+      closeable
+    >{{item.content}}</tab-item>
+  </tab>
+
+  <view class="com-title">禁用</view>
+  <tab>
+    <tab-item 
+      a:for="{{tabs}}" 
+      title="{{item.tab}}"
+      itemKey="{{item.key}}"
+      disabled
+    >{{item.content}}</tab-item>
+  </tab>
+
+
+  <view class="com-title">附加额外内容</view>
+  <tab>
+    <div type="tab-extra">
+      <button>这是一个按钮</button>
+    </div>  
+    <tab-item 
+      a:for="{{tabs}}" 
+      title="{{item.tab}}"
+      itemKey="{{item.key}}"
+    >{{item.content}}</tab-item>
+  </tab>
+
+  <view class="com-title">选项卡嵌套</view>
+  <tab onChange={callback} shape="wrapped">
+        <tab-item title="Tab 1" itemKey="1">
+            <tab shape="wrapped">
+                <tab-item title="1-1" itemKey="11">1-1</tab-item>
+                <tab-item title="1-2" itemKey="12">1-2</tab-item>
+                <tab-item title="1-3" itemKey="13">1-3</tab-item>
+            </tab>
+        </tab-item>
+        <tab-item title="Tab 2" itemKey="2">
+            <tab shape="pure">
+                <tab-item title="2-1" itemKey="21">2-1</tab-item>
+                <tab-item title="2-2" itemKey="22">2-2</tab-item>
+                <tab-item title="3-3" itemKey="23">2-3</tab-item>
+            </tab>
+        </tab-item>
+        <tab-item title="Tab 3" itemKey="3">
+            <tab shape="capsule">
+                <tab-item title="3-1" itemKey="31">3-1</tab-item>
+                <tab-item title="3-2" itemKey="32">3-2</tab-item>
+                <tab-item title="3-3" itemKey="33">3-3</tab-item>
+            </tab>
+        </tab-item>
+        <tab-item title="Tab 4" itemKey="4">
+            <tab shape="text">
+                <tab-item title="4-1" itemKey="41">4-1</tab-item>
+                <tab-item title="4-2" itemKey="42">4-2</tab-item>
+                <tab-item title="4-3" itemKey="43">4-3</tab-item>
+            </tab>
+        </tab-item>
+    </tab>
+
+    <view class="com-title">方位</view>
+    <select 
+      onChange="changeTabPosition"
+      placeholder="Choose Positon of Tab"
+      value="{{position}}">
+      <option a:for="{{tabPositions}}" value="{{item}}" itemKey="{{item}}">{{item}}</option>
+    </select>
+    <tab
+      tabPosition="{{position}}"
+      shape="wrapped"
+      >
+      <tab-item 
+        a:for="{{tabs}}" 
+        title="{{item.tab}}"
+        itemKey="{{item.key}}"
+      >{{item.content}}</tab-item>
+    </tab>
+</view> 

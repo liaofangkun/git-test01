@@ -1,0 +1,40 @@
+<view class="com-wrap">
+  
+    <view class="com-title">大小</view>
+    <view class="com-sub-title">smalll</view>
+    <pagination defaultCurrent="{{2}}" shape="arrow-prev-only" size="small" />
+    <view class="com-sub-title">medium</view>
+    <pagination defaultCurrent="{{2}}" size="medium" />
+    <view class="com-sub-title">large</view>
+    <pagination defaultCurrent="{{2}}" size="large" />
+
+    <view class="com-title">分页类型</view>
+    <view class="com-sub-title">normal</view>
+    <pagination defaultCurrent="{{2}}" type="normal" />
+    <view class="com-sub-title">simple</view>
+    <pagination defaultCurrent="{{2}}" type="simple" />
+    <view class="com-sub-title">mini</view>
+    <pagination defaultCurrent="{{2}}" type="mini" />
+
+    <view class="com-title">分页尺寸</view>
+    <view class="com-sub-title">To hidden per page size selector</view>
+    <pagination pageSizeSelector="{{false}}" />
+    <view class="com-sub-title">Type per page size selector of is dropdown，and as for the tail of the entire component</view>
+    <pagination pageSizeSelector="dropdown" pageSizePosition="end" onPageSizeChange={handlePageSizeChange} />
+    <view class="com-sub-title">Filter type per page size selector, and use floating layout</view>
+    <pagination pageSizeSelector="filter" onPageSizeChange={handlePageSizeChange} useFloatLayout />
+
+    <view class="com-title">事件</view>
+    <view class="com-sub-title">onChange</view>
+    <pagination defaultCurrent="{{2}}" onChange="onChange" />
+    <view class="com-sub-title">onPageSizeChange</view>
+    <pagination pageSizeSelector="dropdown" onPageSizeChange="onPageSizeChange" />
+    <view class="com-sub-title">medium</view>
+    <pagination defaultCurrent="{{2}}" size="medium" />
+    <view class="com-sub-title">large</view>
+    <pagination total="1100" pageSize="200" hideOnlyOnePage="true" defaultCurrent="{{2}}" size="large" />
+    
+    <view class="com-title">显示每页可选的值</view>
+    <pagination defaultCurrent="3" total="100" pageShowCount="5" pageSize="4" pageSizeSelector="dropdown" pageSizeList="{{[10, 20, 30]}}"/>
+
+</view>

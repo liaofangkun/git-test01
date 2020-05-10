@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "base-card": "../../component/base-card/base-card"
+  }
+}

@@ -1,0 +1,41 @@
+<view>
+  <view class="com-title">基本进度条</view>
+  <progress percent="30" />
+  <progress percent="50" />
+  <progress percent="90" />
+  <progress percent="40" />
+  <progress percent="40" hasBorder size="large" />
+  
+  <view class="com-title">圆形进度条</view>
+  <progress percent="30" shape="circle" />
+  <progress percent="50" shape="circle" />
+  
+  <view class="com-title">不同状态</view>
+  <progress percent="20" shape="circle" state="normal" className="custom-progress" />
+  <progress percent="95" shape="circle" state="success" className="custom-progress" />
+  <progress percent="95" shape="circle" state="error" className="custom-progress" />
+  
+  <view class="com-title">动态设置</view>
+  <button a:if="{{addDisabled}}" disabled><icon type="add" /></button>
+  <button onTap="addProgress" a:if="{{!addDisabled}}"><icon type="add" /></button>
+  
+  <button a:if="{{minDisabled}}" disabled><icon type="minus" /></button>
+  <button onTap="minusProgress" a:if="{{!minDisabled}}"><icon type="minus" /></button>
+  <progress percent="{{percent}}" progressive size="large" />
+  <progress percent="{{percent}}" progressive shape="circle" size="large" />
+
+  <view class="com-title">尺寸</view>
+  <progress percent="30" size="small" />
+    <progress percent="50" size="medium" />
+    <progress percent="90" size="large" />
+    <br />
+    <progress percent="30" size="small" shape="circle" /> 
+    <progress percent="50" size="medium" shape="circle" /> 
+    <progress percent="90" size="large" shape="circle" />
+
+
+  <view class="com-title">progressive</view>
+    <progress percent="20" progressive />
+    <progress percent="60" progressive />
+    <progress percent="90" progressive />
+</view>

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-title": "../../component/title/title"
+  }
+}

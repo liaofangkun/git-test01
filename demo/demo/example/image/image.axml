@@ -1,0 +1,9 @@
+<view class="com-wrap">
+  <view class="com-title">图片</view>
+  <view class="com-sub-title" a:for="{{array}}" a:for-item="item">
+    <view>{{item.text}}</view>
+    <view class="page-section-demo" onTap="onTap">
+      <image class="image" data-name="{{item.mode}}" onTap="onTap" mode="{{item.mode}}" src="{{src}}" onError="imageError" onLoad="imageLoad" />
+    </view>
+  </view>
+</view>

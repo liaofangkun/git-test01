@@ -1,0 +1,14 @@
+<view>
+  <framework info="{{ info }}" menu="{{ menu }}" onChange="onChange" defaultActiveKey="{{ defaultActiveKey }}" activeKey="{{ activeKey }}" >
+    <router-view>
+      <button slot="button"></button>
+      <icon slot="icon"></icon>
+    </router-view>
+  </framework>
+  <button type="primary" onTap="onActiveKeyChange" data-path="/create/base"> 切换到"基本信息" </button>
+  <button type="primary" onTap="onActiveKeyChange" data-path="/my/lanuh"> 切换到"我发起的" </button>
+  <!-- <router-view>
+    <icon slot="icon"></icon>
+    <button slot="button"></button>
+  </router-view> -->
+</view>

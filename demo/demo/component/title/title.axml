@@ -1,0 +1,4 @@
+<view>
+  <view class="com-title" id="{{ title }}">{{ title }}</view>
+  <view class="com-sub-title">{{ subTitle }}</view>
+</view>

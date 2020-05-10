@@ -1,0 +1,48 @@
+<view class="demo-container">
+    <view class="container-header-part">
+        <view class="header-name"> TAOBAO Mini APP </view>
+        <view class="desktop-demo"> Desktop Demo </view>
+        <view class="header-search-area"> 
+            <view class="header-search"> 
+              <icon size="small" type="search" />
+              <text class="search-text">搜索</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="container-body-part">
+        <view class="body-menu">
+            <menu className="my-menu" selectedKeys="{{selectedKeys}}" onSelect="handleSelect">
+                <group a:for="{{demodata}}" a:for-item="group" label="{{group.type}}">
+                    <item a:if="{{item.status !== 'disabled'}}" onTap="onItemClick"
+                        a:for="{{group.items}}"
+                        key="{{item.key}}"
+                        data-type-name="{{group.type}}"
+                        data-component="{{item.key}}"
+                        data-type="{{group.key}}"
+                        data-component-name="{{item.name}}">
+                        {{item.name}}
+                    </item>
+                    <item disabled a:for="{{group.items}}" a:if="{{item.status === 'disabled'}}">
+                        {{item.name}}
+                    </item>
+                    <divider />
+                </group>
+            </menu>
+        </view>
+        <view class="body-content">
+
+            <view class="content-navigator-container">
+                <view class="navigator-path">Desktop Demo / {{typeName}} / {{componentName}}</view>
+                <view class="navigator-name">{{componentName}}</view>
+            </view>
+
+            <router-view>
+                <base slot="component" />
+                <scene slot="scene" />
+                <api slot="api" />
+            </router-view>
+
+        </view>
+    </view>
+</view>

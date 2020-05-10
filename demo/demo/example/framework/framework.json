@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "router-view": "../../component/router-view/router-view",
+    "button": "../button/button",
+    "icon": "../icon/icon"
+  }
+}

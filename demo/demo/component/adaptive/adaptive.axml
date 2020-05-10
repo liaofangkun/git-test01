@@ -1,0 +1,7 @@
+<view>
+  <view class="content-main-container">
+    <router-view>
+      <framework slot="framework" />
+    </router-view>
+  </view>
+</view>

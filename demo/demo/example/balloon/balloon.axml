@@ -1,0 +1,294 @@
+<template name="content">
+  <div>
+    <view class="content-title">balloon title</view>
+    <view>balloon content</view>
+  </div>
+</template>
+
+<view class="com-wrap" style="padding-bottom: 100px">
+  <custom-title title="基本" subTitle="基础用法"></custom-title>
+  <balloon closable="{{ false }}">
+    <button slot="trigger" class="custom-button-1">default style</button>
+    <view>default</view>
+  </balloon>
+  <balloon type="primary" triggerType="click">
+    <button slot="trigger" class="custom-button-1" onTap="tapOnButton">
+      primary style
+    </button>
+    <view>primary</view>
+  </balloon>
+  <balloon closable="{{ false }}">
+    <button slot="trigger" disabled class="custom-button-1">
+      default style
+    </button>
+    <view>disabeled default</view>
+  </balloon>
+
+  <custom-title
+    title="三种触发方式"
+    subTitle="鼠标移入、聚集、点击。"
+  ></custom-title>
+  <view style="margin-bottom: 20px">
+    <balloon triggerType="hover">
+      <button slot="trigger" class="custom-button-1">hover</button>
+      <view>content</view>
+    </balloon>
+    <balloon triggerType="click">
+      <button slot="trigger" class="custom-button-1">click</button>
+      <view>content</view>
+    </balloon>
+    <balloon triggerType="focus">
+      <button slot="trigger" class="custom-button-1">focus</button>
+      <view>content</view>
+    </balloon>
+  </view>
+  <view style="margin-bottom: 20px">
+    <balloon triggerType="hover">
+      <input slot="trigger" class="custom-input-1" placeholder="hover" />
+      <view>content</view>
+    </balloon>
+    <balloon triggerType="click">
+      <input slot="trigger" class="custom-input-1" placeholder="click" />
+      <view>content</view>
+    </balloon>
+    <balloon triggerType="focus">
+      <input slot="trigger" class="custom-input-1" placeholder="focus" />
+      <view>content</view>
+    </balloon>
+  </view>
+
+  <custom-title
+    title="边缘对齐设置"
+    subTitle="位置有十二个方向。"
+  ></custom-title>
+  <view class="wrapper">
+    <balloon align="tl" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-top-left">
+        top left
+      </button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="t" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-top">top</button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="tr" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-top-right">
+        top right
+      </button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="lt" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-left-top">
+        left top
+      </button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="l" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-left">left</button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="lb" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-left-bottom">
+        left bottom
+      </button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="rt" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-right-top">
+        right top
+      </button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="r" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-right">right</button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="rb" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-right-bottom">
+        right bottom
+      </button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="bl" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-bottom-left">
+        bottom left
+      </button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="b" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-bottom">
+        bottom
+      </button>
+      <template is="content"></template>
+    </balloon>
+    <balloon align="br" alignEdge style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-bottom-right">
+        bottom right
+      </button>
+      <template is="content"></template>
+    </balloon>
+  </view>
+
+  <custom-title title="从浮层内关闭, 事件回调"></custom-title>
+  <!-- afterClose 小程序不支持 after 开头的事件 -->
+  <balloon onClose="onClose" onAfterClose="afterClose">
+    <button slot="trigger" class="custom-button-1">
+      hover to popup the card
+    </button>
+    <template is="content"></template>
+  </balloon>
+
+  <custom-title
+    title="close按钮事件，手动控制visible"
+    subTitle="使用 visible,属性控制浮层显示, 使balloon变为受限组件。"
+  ></custom-title>
+  <balloon triggerType="click" visible="{{ visible }}" onClose="onClose">
+    <button slot="trigger" class="custom-button-1" onTap="changeVisible">
+      click to pupup the card
+    </button>
+    <template is="content"></template>
+  </balloon>
+
+  <custom-title
+    title="嵌套浮层问题"
+    subTitle="浮层中如果又有浮层，比如在Balloon中有DatePicker/Select的浮层,
+    DatePicker选择时，Balloon浮层也会关闭。可以用 followTrigger解决。"
+  ></custom-title>
+  <balloon type="primary" triggerType="click" autoFocus closable="{{ false }}">
+    <button slot="trigger" class="custom-button-1">Show Select</button>
+    <!-- React does not recognize the `followTrigger` prop on a DOM element. -->
+    <select
+      dataSource="{{ ['apple', 'banana', 'orange'] }}"
+      followTrigger
+    ></select>
+  </balloon>
+  <balloon type="primary" triggerType="click" autoFocus closable="{{ false }}">
+    <button slot="trigger" class="custom-button-1">Show DatePicker</button>
+    <date-picker defaultValue="2019-01-01" followTrigger></date-picker>
+  </balloon>
+  <balloon type="primary" triggerType="click" autoFocus closable="{{ false }}">
+    <button slot="trigger" class="custom-button-1">Show Inner Balloon</button>
+    <balloon followTrigger triggerType="click">
+      <button slot="trigger" type="primary" class="custom-button-1">
+        please click
+      </button>
+      nesting balloon content
+    </balloon>
+  </balloon>
+
+  <custom-title
+    title="tooltip"
+    subTitle="简化的Balloon, 只能设置align, trigger和children, 触发条件是hover."
+  ></custom-title>
+  <view class="wrapper">
+    <tooltip align="tl" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-top-left">
+        top left
+      </button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="t" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-top">top</button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="tr" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-top-right">
+        top right
+      </button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="lt" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-left-top">
+        left top
+      </button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="l" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-left">left</button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="lb" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-left-bottom">
+        left bottom
+      </button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="rt" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-right-top">
+        right top
+      </button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="r" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-right">right</button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="rb" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-right-bottom">
+        right bottom
+      </button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="bl" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-bottom-left">
+        bottom left
+      </button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="b" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-bottom">
+        bottom
+      </button>
+      <template is="content"></template>
+    </tooltip>
+    <tooltip align="br" style="width: 300">
+      <button slot="trigger" class="custom-button-1 button-bottom-right">
+        bottom right
+      </button>
+      <template is="content"></template>
+    </tooltip>
+  </view>
+
+  <!-- <view class="com-title" id="无障碍">无障碍</view>
+  <view class="com-sub-title">弹层id, 传入值才会支持无障碍。</view>
+  <balloon
+    id="inner-a11y-balloon-1"
+    autoFocus
+    popupContainer="inner-a11y-balloon-1"
+  >
+    <button slot="trigger" type="primary">Fill in sub-form</button>
+    please input your age:
+    <input placeholder="Age" size="small" label="Age :" id="balloon-input-1"></input>
+  </balloon>
+  <balloon id="a11y-balloon" type="primary" autoFocus>
+    <button slot="trigger">Fill in form</button>
+    <balloon
+      id="inner-a11y-balloon"
+      autoFocus
+      popupContainer="inner-a11y-balloon"
+      followTrigger
+    >
+      <button slot="trigger" type="primary">Fill in sub-form</button>
+      please input your age:
+      <input
+        placeholder="Age"
+        size="small"
+        label="Age :"
+        id="balloon-input-2"
+      ></input>
+    </balloon>
+    please input your name:
+    <input
+      placeholder="Name"
+      size="small"
+      label="Name :"
+      id="balloon-input-3"
+    ></input>
+  </balloon>
+
+  <tooltip id="aria-tooltip">
+    <button slot="trigger">show tooltip</button>
+    <p>This is content for tooltip.</p>
+  </tooltip> -->
+</view>

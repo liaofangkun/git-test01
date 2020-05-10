@@ -1,0 +1,118 @@
+<view class="com-wrap overlay" style="padding-bottom: 100px">
+  <custom-title title="基本" subTitle="弹出一个弹层。"></custom-title>
+  <button onTap="onTap" id="button-1" data-index="1">
+    Toggle visible
+  </button>
+  <overlay
+    visible="{{ visible1 }}"
+    target="button-1"
+    safeNode="button-1"
+    onRequestClose="onClose"
+    data-index="1"
+  >
+    <text class="overlay-demo">Hello 1</text>
+  </overlay>
+
+  <custom-title title="遮罩" subTitle="带有遮罩的弹层。"></custom-title>
+  <button onTap="onTap" id="button-2" data-index="2">Open</button>
+  <overlay
+    visible="{{ visible2 }}"
+    target="button-2"
+    safeNode="button-2"
+    hasMask
+    disableScroll
+    onRequestClose="onClose"
+    data-index="2"
+  >
+    <text class="overlay-demo">Hello 2</text>
+  </overlay>
+
+  <custom-title
+    title="触发的弹层"
+    subTitle="使用 Popup 弹出一个弹层。"
+  ></custom-title>
+  <popup triggerType="click">
+    <button slot="trigger">Open</button>
+    <text class="overlay-demo">
+      Hello World From Popup!
+    </text>
+  </popup>
+  <popup triggerType="click" triggerClickKeycode="{40}">
+    <button slot="trigger">Use Down Arrow to open</button>
+    <text class="overlay-demo">
+      Hello World From Popup!
+    </text>
+  </popup>
+
+  <custom-title
+    title="触发的弹层受控显示隐藏"
+    subTitle="展示了 Popup 受控显示隐藏的用法。"
+  ></custom-title>
+  <popup
+    triggerType="click"
+    visible="{{ visible3 }}"
+    onVisibleChange="onVisibleChange"
+  >
+    <button slot="trigger" style="margin-bottom: 20px">Open</button>
+    <text class="overlay-demo">
+      Hello World From Popup!
+    </text>
+  </popup>
+  <view>
+    <popup
+      triggerType="click"
+      visible="{{ groupVisible }}"
+      safeNode="{{ ['button-4', 'overlay-4'] }}"
+      onVisibleChange="onGroupVisibleChange"
+    >
+      <button id="button-3" style="margin-right: 300px" slot="trigger">
+        Paired Popup 1
+      </button>
+      <text className="overlay-demo" id="overlay-3">
+        Hello World From Popup!
+      </text>
+    </popup>
+    <popup
+      triggerType="click"
+      visible="{{ groupVisible }}"
+      safeNode="{{ ['button-3', 'overlay-3'] }}"
+      onVisibleChange="onGroupVisibleChange"
+    >
+      <button id="button-4" slot="trigger">Paired Popup 2</button>
+      <text className="overlay-demo" id="overlay-4">
+        Hello World From Popup!
+      </text>
+    </popup>
+  </view>
+
+  <custom-title
+    title="弹层嵌套"
+    subTitle="有弹层嵌套需求时，请使用 container 属性将第二个弹层渲染到第一个弹层内部。"
+  ></custom-title>
+  <popup triggerType="click">
+    <button slot="trigger">Open first overlay</button>
+    <view className="overlay-demo" id="parent-container">
+      <popup triggerType="click" container="parent-container">
+        <button slot="trigger">Open second overlay</button>
+        <view className="overlay-demo">
+          <view>Hello World From Second Overlay!</view>
+        </view>
+      </popup>
+      <view>Hello World From First Overlay!</view>
+    </view>
+  </popup>
+
+  <custom-title
+    title="弹层跟随滚动"
+    subTitle="弹层默认参照 document.body 绝对定位，如果弹层显示隐藏的触发元素所在容器（一般为父节点）有滚动条，那么当容器滚动时，会发生触发元素与弹层相分离的情况，解决的办法是将弹层渲染到触发元素所在的容器中。（触发元素所在的容器，必须设置 position 样式，以完成弹层的绝对定位。）"
+  ></custom-title>
+  <view class="scroll-container" id="scroll-container">
+    <popup triggerType="click" container="scroll-container">
+      <button slot="trigger">Open</button>
+      <view class="overlay-demo">
+        Hello World From Popup!
+      </view>
+    </popup>
+    <view style="height: 300px">something</view>
+  </view>
+</view>

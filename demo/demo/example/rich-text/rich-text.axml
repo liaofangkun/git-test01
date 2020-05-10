@@ -1,0 +1,3 @@
+<view class="com-wrap" style="height: 400px">
+  <editor value="{{ value }}" onChange="onChange"></editor>
+</view>

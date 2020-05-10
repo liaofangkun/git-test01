@@ -1,0 +1,34 @@
+<view class="com-wrap">
+  <!-- <web-view src="http://127.0.0.1:8080/iframe.html?a=1&b=2"></web-view> -->
+  <view class="com-title">基本用法</view>
+  <icon type="atm" style="color: #3597f2;" />
+
+  <view class="com-title">图表列表</view>
+  <view class="icons-group">
+    <view a:for="{{types}}" class="icon-group">
+      <icon type="{{item}}" style="color: #3597f2;" size="xl" />
+      <span>{{item}}</span>
+    </view>
+  </view>
+  <view class="com-title">自定义尺寸</view>
+  <icon type="smile" class="custom-icon-1" style="color: #3597f2;" a:for="{{icon}}" size="{{item}}" />
+
+  <view class="com-title">自定义样式</view>
+  <view class="icon-style-demo">
+  <icon type="success" style="color: #1DC11D; margin-right: 10px" />
+  This is a success message!
+  </view>
+  <view class="icon-style-demo">
+  <icon type="warning" style="color: #FFA003; margin-right: 10px" />
+  This is a warning message!
+  </view>
+  <view class="icon-style-demo">
+  <icon type="error" style="color: #FF3333; margin-right: 10px" />
+  This is a failure message!
+  </view>
+
+  <custom-title title="自定义图标库" subTitle="利用 iconfont symbol 的方式动态加载自定义图标"></custom-title>
+  <icon-resource url="//at.alicdn.com/t/font_1370436_83ddxcdl0kt.js"></icon-resource>
+  <icon custom type="icon-food-strawberry" class="icon"></icon>
+  <icon custom type="icon-food-pudding" class="icon"></icon>
+</view>

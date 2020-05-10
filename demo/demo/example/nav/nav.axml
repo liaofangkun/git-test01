@@ -1,0 +1,14 @@
+<view class="com-wrap">
+  <nav 
+  className="basic-nav" 
+  direction="hoz" 
+  type="primary"
+  triggerType="click">
+    <item key="home">Home</item>
+        <sub-nav label="Component">
+            <item key="next">Next</item>
+            <item key="mext">Mext</item>
+        </sub-nav> 
+         <item key="document">Document</item>
+    </nav>
+</view>

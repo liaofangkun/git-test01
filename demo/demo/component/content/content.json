@@ -1,0 +1,29 @@
+{
+  "component": true,
+  "usingComponents": {
+    "button": "../../example/button/button",
+    "balloon": "../../example/balloon/balloon",
+    "rich-text": "../../example/rich-text/rich-text",
+    "menu-button": "../../example/menu-button/menu-button",
+    "select": "../../example/select/select",
+    "slider": "../../example/slider/slider",
+    "menu": "../../example/menu/menu",
+    "icon": "../../example/icon/icon",
+    "progress": "../../example/progress/progress",
+    "date-picker": "../../example/date-picker/date-picker",
+    "pagination": "../../example/pagination/pagination",
+    "nav": "../../example/nav/nav",
+    "tab": "../../example/tab/tab",
+    "textarea": "../../example/textarea/textarea",
+    "switch": "../../example/switch/switch",
+    "input": "../../example/input/input",
+    "checkbox": "../../example/checkbox/checkbox",
+    "radio": "../../example/radio/radio",
+    "other": "../../example/other/other",
+    "media": "../../example/media/media",
+    "interface": "../../example/interface/interface",
+    "network": "../../example/network/network",
+    "base": "../../example/base/base",
+    "form": "../../example/form/form"
+  }
+}

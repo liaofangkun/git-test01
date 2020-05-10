@@ -1,0 +1,11 @@
+<view>
+  <view class="content-main-simple-container">
+    <router-view>
+      <other slot="other" />
+      <media slot="media" />
+      <interface slot="interface" />
+      <network slot="network" />
+      <base slot="base" />
+    </router-view>
+  </view>
+</view>

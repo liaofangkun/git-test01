@@ -1,0 +1,25 @@
+.custom-button{
+    width: 200px;
+    margin-bottom: 5px;
+}
+.api-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.common-text{
+    display: inline-block;
+    width: 100%;
+    font-size: 12px;
+    margin-left: 100px;
+    color: #666;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.common-input-1{
+    margin: 0 5px;
+}
+.common-button-1 {
+    width: 60px;
+    padding: 0 5px !important;
+}

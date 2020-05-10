@@ -1,0 +1,19 @@
+<view class="com-wrap">
+  <view class="com-title">简单</view>
+  <checkbox class="block">Unchecked</checkbox>
+  <checkbox defaultChecked class="block">DefaultChecked</checkbox>
+  <checkbox defaultIndeterminate class="block">Indeterminate</checkbox>
+  <checkbox disabled class="block">Disabled</checkbox>
+  <checkbox disabled checked class="block">Checked-Disabled</checkbox>
+  <checkbox checked class="block">Checked</checkbox>
+
+  <view class="com-title"></view>
+
+  <checkbox>Banana</checkbox>
+  <label class="mr">
+    <checkbox />
+    <text className="next-checkbox-label">Pear</text>
+  </label>
+  <checkbox  class="mr" label="Banana" />
+
+</view>

@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "page/index",
+    "page/adaptive/adaptive",
+    "page/test/test",
+    "page/back/back",
+    "page/to/to"
+  ],
+  "window": {
+    "defaultTitle": "小程序"
+  }
+}

@@ -1,0 +1,31 @@
+<view>
+  <view class="content-main-container">
+  
+    <router-view>
+      <button slot="button" />
+      <balloon slot="balloon" />
+      <slider slot="slider" />
+      <icon slot="icon" />
+      <text slot="text" />
+      <progress slot="progress" />
+      <menu slot="menu" />
+      <select slot="select" />
+      <textarea slot="textarea" />
+      <input slot="input" />
+      <checkbox slot="checkbox" />
+      <nav slot="nav" />
+      <image slot="image" />
+      <tab slot="tab" />
+      <switch slot="switch" />
+      <radio slot="radio" />
+      <pagination slot="pagination" />
+      <date-picker slot="date-picker" />
+      <menu-button slot="menu-button" />
+      <table slot="table" />
+      <test slot="test" />
+      <overlay slot="overlay" />
+      <rich-text slot="rich-text" />
+    </router-view>
+
+  </view>
+</view>

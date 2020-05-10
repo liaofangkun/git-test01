@@ -1,0 +1,4 @@
+.content-main-simple-container {
+  margin-top: 18px;
+  flex: 1;
+}

@@ -1,0 +1,19 @@
+.icon-group{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.icons-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.custom-icon-1{
+    margin-right: 10px !important;
+}

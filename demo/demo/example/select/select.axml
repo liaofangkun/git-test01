@@ -1,0 +1,114 @@
+<view>
+  <view class="com-title">基础选择器</view>
+  <select onChange="onChange" onBlur="onBlur" onToggleHighlightItem="onToggleHighlightItem" defaultValue="frank" showSearch hasClear>
+      <option value="jack">Jack</option>
+      <option value="frank">Frank</option>
+      <option value="hugo">Hugo</option>
+  </select>
+
+  <view class="com-title">宽度适应</view>
+  <view class="com-sub-title">过长省略</view>
+  <select onChange="onChange" onBlur="onBlur" onToggleHighlightItem="onToggleHighlightItem" defaultValue="frank" showSearch hasClear>
+      <option value="jack">这是足够长的内容............................</option>
+      <option value="frank">Frank</option>
+      <option value="hugo">Hugo</option>
+  </select>
+  <view class="com-sub-title">自动加长</view>
+  <select autoWidth="{{false}}" onChange="onChange" onBlur="onBlur" onToggleHighlightItem="onToggleHighlightItem" defaultValue="frank" showSearch hasClear>
+      <option value="jack">这是足够长的内容............................</option>
+      <option value="frank">Frank</option>
+      <option value="hugo">Hugo</option>
+  </select>
+
+  <view class="com-title">滚动模式</view>
+  <view style="height: 200px; overflow:auto">
+    <view class="com-sub-title">跟随滚动模式</view>
+    <select followTrigger onChange="onChange" onBlur="onBlur" onToggleHighlightItem="onToggleHighlightItem" defaultValue="jack" showSearch hasClear>
+        <option value="jack">Jack</option>
+        <option value="frank">Frank</option>
+        <option value="hugo">Hugo</option>
+        <option value="hugo2">Hugo</option>
+        <option value="hugo4">Hugo</option>
+        <option value="hugo3">Hugo</option>
+        <option value="hugo5">Hugo</option>
+        <option value="hugo6">Hugo</option>
+        <option value="hugo87">Hugo</option>
+        <option value="hugo8">Hugo</option>
+        <option value="hugo9">Hugo</option>
+        <option value="hugo0">Hugo</option>
+    </select>
+    <view class="com-sub-title">普通模式</view>
+    <select onChange="onChange" onBlur="onBlur" onToggleHighlightItem="onToggleHighlightItem" defaultValue="jack" showSearch hasClear>
+        <option value="jack">Jack</option>
+        <option value="frank">Frank</option>
+        <option value="hugo">Hugo</option>
+        <option value="hugo2">Hugo</option>
+        <option value="hugo4">Hugo</option>
+        <option value="hugo3">Hugo</option>
+        <option value="hugo5">Hugo</option>
+        <option value="hugo6">Hugo</option>
+        <option value="hugo87">Hugo</option>
+        <option value="hugo8">Hugo</option>
+        <option value="hugo9">Hugo</option>
+        <option value="hugo0">Hugo</option>
+    </select>
+    <view style="height: 500px"></view>
+  </view>
+
+  <view class="com-title">标签</view>
+  <select aria-label="tag mode" mode="tag" onChange="handleChange" dataSource="{{dataSource}}" style="width: 300" />
+
+  <view class="com-title">多选</view>
+  <select class="custom-select-1" mode="multiple" onChange="handleChange" dataSource="{{dataSource}}" style="width: 200" />
+  <select class="custom-select-1" hasSelectAll mode="multiple" onChange="handleChange" dataSource="{{dataSource}}" style="width: 200" />
+  <select class="custom-select-1" hasSelectAll value="{{value}}"  mode="multiple" onChange="handleChange1" dataSource="{{dataSource}}" style="width: 200" />
+
+  <!-- <view class="com-title">选择器</view>
+  <view class="demo-container">
+    <view class="demo-controller">{this.renderCtrlNodes(this.state)}</view>
+    <select {...this.state} onChange={this.handleChange} dataSource="{{dataSource}}" />
+  </view> -->
+
+  <view class="com-title">级联选择</view>
+  <view class="demo-container">
+      <select class="custom-select-1" placeholder="Select Province" dataSource="{{provinceData}}" value="{{province}}" onChange="handleProvinceChange" />
+      <select class="custom-select-1" placeholder="Select City" dataSource="{{data}}" value="{{city}}" onChange="handleCityChange" disabled="{{disabled}}" />
+  </view>
+  
+  <view class="com-title">分组</view>
+  <view class="demo-container">
+      <select class="custom-select-1" placeholder="OptionGroup">
+          <option-group label="group1">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+          </option-group>
+          <option-group label="group2">
+              <option value="small2">Small2</option>
+              <option value="medium2">Medium2</option>
+              <option value="large2">Large2</option>
+          </option-group>
+      </select>
+      <select class="custom-select-1" placeholder="optgroup">
+          <option value="apple">Apple</option>
+          <option value="orange">Orange</option>
+          <option value="banana">Banana</option>
+          <option-group label="Pets Group">
+              <option value="cat">Cat</option>
+              <option value="rabbit">Rabbit</option>
+              <option value="dog" disabled>Dog</option>
+          </option-group>
+      </select>
+      <select class="custom-select-1" placeholder="item.children" dataSource="{{dataSource1}}"/>
+  </view>
+  
+  <!-- <view class="com-title">自定义value</view>
+   <view class="demo-container">
+        <select mode="multiple" placeholder="custom value" valueRender="valueRender" dataSource="{{dataSource2}}" onChange="handleChange2" />
+    </view> -->
+  <!-- <view class="com-title">搜索框</view>
+  <div className="demo-container">
+      <Select showSearch placeholder="select search" filterLocal="false" dataSource="{{dataSource3}}" onSearch="handleSearch" style="width: 200" />
+  </div> -->
+
+</view>

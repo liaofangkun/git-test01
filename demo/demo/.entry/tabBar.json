@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "name": "标准框架",
+      "tag": "page/adaptive/adaptive",
+      "url": "index.html#page/adaptive/adaptive",
+      "launchParamsTag": "page/adaptive/adaptive"
+    },
+    {
+      "name": "商家应用DEMO",
+      "tag": "page/index",
+      "url": "index.html#page/index",
+      "launchParamsTag": "page/index"
+    }
+  ],
+  "disableOnInit": true
+}

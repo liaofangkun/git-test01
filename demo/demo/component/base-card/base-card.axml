@@ -1,0 +1,8 @@
+<view class="card-container">
+  <view class="card-header">
+    {{title}}
+  </view>
+  <view class="card-body">
+    <slot></slot>
+  </view>
+</view>

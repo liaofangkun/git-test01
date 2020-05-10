@@ -1,0 +1,17 @@
+require('@alipay/appx-compiler/lib/sjsEnvInit.js');
+require('./config$.js');
+require('../../example/button/button.js');
+require('../../example/select/select.js');
+require('../../example/slider/slider.js');
+require('../../example/text/text.js');
+require('../../example/menu/menu.js');
+require('../../example/icon/icon.js');
+require('../../example/progress/progress.js');
+require('../../component/base-card/base-card.js');
+require('../../example/interface/interface.js');
+require('../../example/media/media.js');
+require('../../example/other/other.js');
+require('../../example/network/network.js');
+require('../../example/base/base.js');
+require('../../component/content/content.js');
+require('../../page/index.js');

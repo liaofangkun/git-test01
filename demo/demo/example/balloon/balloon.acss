@@ -1,0 +1,80 @@
+.com-title {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.com-sub-title {
+  margin: 10px 0;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.custom-button-1 {
+  margin: 10px;
+}
+
+.custom-input-1 {
+  margin-right: 20px;
+}
+
+.wrapper {
+  position: relative;
+  height: 330px;
+}
+
+.content-title {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  border-bottom: 1px solid #dcdee3;
+}
+
+.wrapper [class*="button"] {
+  position: absolute;
+}
+
+[class*="button-top"] {
+  top: 40px;
+}
+
+[class*="button-left"] {
+  left: 100px;
+}
+
+[class*="button-right"] {
+  left: 560px;
+}
+
+[class*="button-bottom"] {
+  top: 230px;
+}
+
+.button-top-left,
+.button-bottom-left {
+  left: 220px;
+}
+
+.button-top,
+.button-bottom {
+  left: 330px;
+}
+
+.button-top-right,
+.button-bottom-right {
+  left: 420px;
+}
+
+.button-left-top,
+.button-right-top {
+  top: 80px;
+}
+
+.button-left,
+.button-right {
+  top: 130px;
+}
+
+.button-left-bottom,
+.button-right-bottom {
+  top: 180px;
+}

@@ -1,0 +1,119 @@
+<view class="com-wrap">
+  <view class="com-title">基本用法</view>
+  <menu class="my-menu" defaultOpenKeys="sub-menu" onItemTap="onItemClick">
+      <item key="1">Option 1</item>
+      <item disabled key="2">Disabled option 2</item>
+      <divider key="divider" />
+      <group label="Group">
+          <item key="group-1">Group option 1</item>
+          <item key="group-2">Group option 2</item>
+      </group>
+      <divider />
+      <sub-menu key="sub-menu" label="Sub menu">
+          <item key="sub-1">Sub option 1</item>
+          <item key="sub-2">Sub option 2</item>
+          <item disabled key="sub-3">
+              <view>Disabled Option Link 3</view>
+          </item>
+          <item key="sub-4">
+              <view>Option Link 4</view>
+          </item>
+      </sub-menu>
+      <item key="3">Option 3</item>
+      <item disabled key="4">
+          <view>Disabled Option Link</view>
+      </item>
+      <item key="5">
+          <view>Option Link</view>
+      </item>
+  </menu>
+
+  <view class="com-title">内联菜单展开模式</view>
+  <menu defaultOpenKeys="1" class="my-menu" openMode="single">
+        <sub-menu key="0" label="Sub menu 1">
+            <item key="0-0">Sub option 1</item>
+            <item key="0-1">Sub option 2</item>
+            <item key="0-2">Sub option 3</item>
+        </sub-menu>
+        <sub-menu key="1" label="Sub menu 2">
+            <item key="1-0">Sub option 1</item>
+            <item key="1-1">Sub option 2</item>
+            <item key="1-2">Sub option 3</item>
+        </sub-menu>
+        <sub-menu key="2" label="Sub menu 3">
+            <item key="2-0">Sub option 1</item>
+            <item key="2-1">Sub option 2</item>
+            <item key="2-2">Sub option 3</item>
+        </sub-menu>
+        <sub-menu key="3" label="Sub menu 4">
+            <item key="3-0">Sub option 1</item>
+            <item key="3-1">Sub option 2</item>
+            <item key="3-2">Sub option 3</item>
+        </sub-menu>
+    </menu>
+
+  <view class="com-title">弹出菜单</view>
+  <menu class="my-menu" mode="popup">
+        <item key="1">Option 1</item>
+        <item key="2">Option 2</item>
+        <item key="3">Option 3</item>
+        <divider key="divider" />
+        <sub-menu key="sub-1" label="Popup menu 1">
+            <item key="popup-1-1">Popup option 1</item>
+            <item key="popup-1-2">Popup option 2</item>
+        </sub-menu>
+        <sub-menu key="sub-2" label="Popup menu 2">
+            <item key="popup-2-1">Popup option 1</item>
+            <item key="popup-2-2">Popup option 2</item>
+        </sub-menu>
+    </menu>
+
+  <view class="com-title">hover打开子菜单</view>
+  <menu class="my-menu" mode="popup" triggerType="hover">
+        <item key="1">Option 1</item>
+        <item key="2">Option 2</item>
+        <item key="3">Option 3</item>
+        <divider key="divider" />
+        <sub-menu key="sub-1" label="Popup menu 1">
+            <item key="popup-1-1">Popup option 1</item>
+            <item key="popup-1-2">Popup option 2</item>
+        </sub-menu>
+        <sub-menu key="sub-2" label="Popup menu 2">
+            <item key="popup-2-1">Popup option 1</item>
+            <item key="popup-2-2">Popup option 2</item>
+        </sub-menu>
+    </menu>
+
+  <view class="com-title">弹出菜单对齐方式</view>
+   <menu class="my-menu" mode="popup" popupAlign="outside">
+        <item key="1">Option 1</item>
+        <item key="2">Option 2</item>
+        <item key="3">Option 3</item>
+        <divider key="divider" />
+        <sub-menu key="sub-1" label="Popup menu 1">
+            <item key="popup-1-1">Popup option 1</item>
+            <item key="popup-1-2">Popup option 2</item>
+        </sub-menu>
+        <sub-menu key="sub-2" label="Popup menu 2">
+            <item key="popup-2-1">Popup option 1</item>
+            <item key="popup-2-2">Popup option 2</item>
+        </sub-menu>
+    </menu>
+
+  <!-- <view class="com-title">自定义弹出内容</view>
+  <menu class="my-custom-menu" popupProps={popupProps}>
+        <PopupItem key="0" label="Popup item 1">
+            <div class="my-custom-content">Custom content 1</div>
+        </PopupItem>
+        <PopupItem key="1" label="Popup item 2">
+            <div class="my-custom-content">Custom content 2</div>
+        </PopupItem>
+        <PopupItem key="2" label="Popup item 3">
+            <div class="my-custom-content">Custom content 3</div>
+        </PopupItem>
+        <PopupItem key="3" label="Popup item 4">
+            <div class="my-custom-content">Custom content 4</div>
+        </PopupItem>
+    </menu> -->
+
+</view>

@@ -1,0 +1,4 @@
+<view>
+  <view>这是一个新页面，ohohoh~</view>
+  <button type="primary" onTap="navigateTo">打开demo</button>
+</view>

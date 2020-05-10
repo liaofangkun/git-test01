@@ -1,0 +1,8 @@
+<view>
+  <view class="content-main-container">
+    <router-view>
+      <form slot="form" />
+    </router-view>
+
+  </view>
+</view>

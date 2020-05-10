@@ -1,0 +1,62 @@
+<view class="com-wrap">
+    <view class="com-title">基本</view>
+    <view class="com-sub-title">Without Label</view>
+    <radio defaultChecked />
+    <radio checked />
+    <radio disabled />
+    <radio checked disabled />
+    <radio />
+
+    <view class="com-sub-title">With Label</view>
+    <radio >Apple</radio>
+    <radio  /><label htmlFor="banana" className="next-radio-label">Banana</label>
+    <radio  label="Apple" className="testClassname" />
+
+    <view class="com-title">受限组件</view>
+    <view class="com-sub-title">normal:</view>
+    <radio-group dataSource="{{list}}" value="{{value}}" onChange="onChange" />
+    <view class="com-sub-title">disabled:</view>
+    <radio-group disabled dataSource="{{list}}" value="{{value}}" onChange="onChange" />
+
+    <view class="com-title">分组</view>
+    <!-- <view class="com-sub-title">Choose a shape</view>
+    <radio-group shape="button" value="{{shape}}" onChange="onShapeChange">
+        <radio value="normal">Normal</radio>
+        <radio value="button">Button</radio>
+    </radio-group> -->
+    <view class="com-sub-title">Choose an align-type of the item</view>
+    <radio-group shape="button" value="{{itemDirection}}" onChange="onItemDirectionChange">
+        <radio value="hoz">Horizon</radio>
+        <radio value="ver" disabled a:if="{{shape === 'button'}}">Vertical</radio>
+        <radio value="ver" a:else >Vertical</radio>
+    </radio-group>
+
+    <view className="rendered-container">
+        <view class="com-sub-title">Rendered Result</view>
+        <radio-group shape="{{shape}}" itemDirection="{{itemDirection}}" >
+            <radio value="react">React</radio>
+            <radio value="vue">Vue</radio>
+            <radio value="angular">Angular</radio>
+        </radio-group>
+    </view>
+
+    <view class="com-title">非受限组件</view>
+    <radio-group dataSource="{{list}}" defaultValue="apple" />
+
+    <view class="com-title">非受限组件</view>
+    <view class="com-sub-title">Small size</view>
+    <radio-group dataSource="{{list}}" shape="button" size="small" value="{{value1}}" onChange="onSmallChange" />
+    <view class="com-sub-title">Medium size (default)</view>
+    <radio-group dataSource="{{list}}" shape="button" size="medium" value="{{value2}}" onChange="onMediumChange" />
+    <view class="com-sub-title">Large size</view>
+    <radio-group shape="button" size="large" value="{{value3}}" onChange="onNestChange">
+        <radio value="banana">Banana</radio>
+        <radio value="watermelon">Watermelon</radio>
+        <radio value="peach">Peach</radio>
+    </radio-group>
+    <view class="com-sub-title">Disabled and Selected-Disabled status</view>
+    <radio-group shape="button" value="banana" onChange="onNestChange">
+        <radio disabled value="peach">Peach</radio>
+        <radio disabled value="banana">Banana</radio>
+    </radio-group>
+    </view>

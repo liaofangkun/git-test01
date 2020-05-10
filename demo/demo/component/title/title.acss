@@ -1,0 +1,11 @@
+.com-title {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.com-sub-title {
+  margin: 10px 0;
+  font-size: 12px;
+  color: #8e8e8e;
+  line-height: 1.5;
+}

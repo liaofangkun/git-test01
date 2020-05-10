@@ -1,0 +1,17 @@
+<view class="com-wrap">
+  <view class="com-title">简单</view>
+  <switch checkedChildren="on" unCheckedChildren="off" onTap="ontap" />
+  <switch defaultChecked="false" size="small" class="mr" />
+  <switch checkedChildren="on" unCheckedChildren="off please" class="mr large-width" />
+
+  <view class="com-title">受控开关</view>
+  <switch checked="{{checked}}" onChange="onChange"/>
+  <switch checked="{{checked}}" disabled  class="mr"/>
+
+  <view class="com-title">禁用状态</view>
+  <switch disabled  />
+  <switch checkedChildren="on" unCheckedChildren="off" disabled class="mr"/>
+
+  <view class="com-title">无障碍</view>
+  <switch checkedChildren="on"  unCheckedChildren="off" />
+</view>
